@@ -6,8 +6,8 @@ enum class PrioridadTarea { BAJA, MEDIA, ALTA }
 enum class EstadoTarea { PENDIENTE, EN_PROGRESO, COMPLETADA }
 
 data class Tarea(
-    val id: Long = 0,
-    val titulo: String,
+    val id: Long = 0, // ID Único
+    val titulo: String, // Título obligatorio
     val descripcion: String = "",
     val materiaId: Long,
     val materiaNombre: String = "",
