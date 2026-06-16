@@ -7,16 +7,20 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 object RetrofitInstance {
-    private const val BASE_URL = "https://api.appuntes.example.com/v1/"
+
     private val loggingInterceptor = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
     }
+
     private val client = OkHttpClient.Builder()
         .addInterceptor(loggingInterceptor)
         .addInterceptor { chain ->
             val request = chain.request().newBuilder()
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
+                // Headers requeridos por Supabase PostgREST
+                .addHeader("apikey",        SupabaseConfig.SUPABASE_KEY)
+                .addHeader("Authorization", "Bearer ${SupabaseConfig.SUPABASE_KEY}")
+                .addHeader("Content-Type",  "application/json")
+                .addHeader("Accept",        "application/json")
                 .build()
             chain.proceed(request)
         }
@@ -24,14 +28,20 @@ object RetrofitInstance {
         .readTimeout(15, TimeUnit.SECONDS)
         .writeTimeout(15, TimeUnit.SECONDS)
         .build()
-    val api: ApiService by lazy {
+
+    private val retrofit: Retrofit by lazy {
         Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(SupabaseConfig.BASE_URL)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(ApiService::class.java)
     }
+
+    // Cliente PostgREST — usar este en código nuevo
+    val supabaseApi: SupabaseApiService by lazy { retrofit.create(SupabaseApiService::class.java) }
+
+    // Mantenido por compatibilidad con código existente
+    val api: ApiService by lazy { retrofit.create(ApiService::class.java) }
 }
 
 sealed class NetworkResult<T> {
