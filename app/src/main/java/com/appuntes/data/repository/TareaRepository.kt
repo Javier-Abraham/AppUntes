@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import java.time.LocalDate
 
-class TareaRepository(private val dao: TareaDao) {
+class TareaRepository(val dao: TareaDao) {
 
     val tareas: Flow<List<Tarea>> = dao.getAllTareas().map { it.map { e -> e.toDomain() } }
 

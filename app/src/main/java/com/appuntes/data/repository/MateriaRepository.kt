@@ -6,7 +6,7 @@ import com.appuntes.domain.model.Materia
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-class MateriaRepository(private val dao: MateriaDao) {
+class MateriaRepository(val dao: MateriaDao) {
 
     val materias: Flow<List<Materia>> = dao.getAllMaterias().map { entities ->
         entities.map { it.toDomain() }

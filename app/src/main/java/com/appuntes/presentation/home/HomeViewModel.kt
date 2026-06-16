@@ -2,6 +2,7 @@ package com.appuntes.presentation.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.appuntes.data.remote.SupabaseRepository
 import com.appuntes.data.repository.MateriaRepository
 import com.appuntes.data.repository.TareaRepository
 import com.appuntes.domain.model.Materia
@@ -27,7 +28,21 @@ class HomeViewModel(
     private val _uiState = MutableStateFlow(HomeUiState(isLoading = true))
     val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
 
-    init { loadData() }
+    init {
+        loadData()
+        syncWithSupabase()
+    }
+
+    private fun syncWithSupabase() {
+        viewModelScope.launch {
+            try {
+                val supabaseRepo = SupabaseRepository(materiaRepository.dao, tareaRepository.dao)
+                supabaseRepo.syncFromSupabase()
+            } catch (e: Exception) {
+                // Falla silenciosamente — la app funciona offline con Room
+            }
+        }
+    }
 
     private fun loadData() {
         viewModelScope.launch {
