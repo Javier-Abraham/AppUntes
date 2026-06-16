@@ -30,6 +30,9 @@ android {
         jvmToolchain(17)
     }
     buildFeatures { compose = true }
+    testOptions {
+        unitTests { isReturnDefaultValues = true }
+    }
 }
 
 dependencies {

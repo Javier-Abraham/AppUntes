@@ -10,6 +10,8 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.Notes
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -92,7 +94,7 @@ fun CrearTareaScreen(
         topBar = {
             TopAppBar(
                 title = { Text(if (isEditing) "Editar tarea" else "Nueva tarea", fontWeight = FontWeight.Bold) },
-                navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Filled.ArrowBack, null) } }
+                navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Filled.ArrowBack, null) } }
             )
         }
     ) { paddingValues ->
@@ -105,7 +107,7 @@ fun CrearTareaScreen(
                 label = { Text("Título *") }, leadingIcon = { Icon(Icons.Filled.Title, null) },
                 modifier = Modifier.fillMaxWidth(), singleLine = true)
             OutlinedTextField(value = descripcion, onValueChange = { descripcion = it },
-                label = { Text("Descripción (opcional)") }, leadingIcon = { Icon(Icons.Filled.Notes, null) },
+                label = { Text("Descripción (opcional)") }, leadingIcon = { Icon(Icons.AutoMirrored.Filled.Notes, null) },
                 modifier = Modifier.fillMaxWidth(), minLines = 2, maxLines = 4)
             ExposedDropdownMenuBox(expanded = showMateriaDropdown,
                 onExpandedChange = { showMateriaDropdown = !showMateriaDropdown }) {

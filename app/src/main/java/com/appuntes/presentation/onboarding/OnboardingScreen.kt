@@ -6,6 +6,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.compose.material.icons.automirrored.filled.Assignment
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -26,7 +28,7 @@ data class OnboardingPage(
 val ONBOARDING_PAGES = listOf(
     OnboardingPage(Icons.Filled.School, "Organizá tus materias",
         "Registrá todas tus materias, profesores y horarios en un solo lugar."),
-    OnboardingPage(Icons.Filled.Assignment, "Gestioná tus tareas",
+    OnboardingPage(Icons.AutoMirrored.Filled.Assignment, "Gestioná tus tareas",
         "Creá tareas, asignales prioridad y fecha de entrega. Recibí recordatorios automáticos."),
     OnboardingPage(Icons.Filled.CalendarMonth, "Tu calendario académico",
         "Visualizá todos tus vencimientos en un calendario y planificá tu semana.")
@@ -85,7 +87,7 @@ fun OnboardingScreen(onFinish: () -> Unit) {
                     Button(onClick = { currentPage++ }, shape = RoundedCornerShape(12.dp)) {
                         Text("Siguiente")
                         Spacer(Modifier.width(8.dp))
-                        Icon(Icons.Filled.ArrowForward, null)
+                        Icon(Icons.AutoMirrored.Filled.ArrowForward, null)
                     }
                 } else {
                     Button(onClick = onFinish, modifier = Modifier.fillMaxWidth(),

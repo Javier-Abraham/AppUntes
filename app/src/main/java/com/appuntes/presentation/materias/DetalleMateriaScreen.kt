@@ -7,6 +7,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.Assignment
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -55,7 +57,7 @@ fun DetalleMateriaScreen(
             TopAppBar(
                 title = { Text(materia?.nombre ?: "Materia", fontWeight = FontWeight.Bold,
                     maxLines = 1, overflow = TextOverflow.Ellipsis) },
-                navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Filled.ArrowBack, null) } },
+                navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Filled.ArrowBack, null) } },
                 actions = {
                     IconButton(onClick = onEditarMateria) { Icon(Icons.Filled.Edit, "Editar") }
                     IconButton(onClick = { showDeleteDialog = true }) {
@@ -131,7 +133,7 @@ fun DetalleMateriaScreen(
                         MaterialTheme.colorScheme.error, Modifier.weight(1f))
                     StatCard("Completadas", completadas.toString(), Icons.Filled.CheckCircle,
                         Color(0xFF2E7D32), Modifier.weight(1f))
-                    StatCard("Total", tareasDeMat.size.toString(), Icons.Filled.Assignment,
+                    StatCard("Total", tareasDeMat.size.toString(), Icons.AutoMirrored.Filled.Assignment,
                         MaterialTheme.colorScheme.primary, Modifier.weight(1f))
                 }
             }

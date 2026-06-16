@@ -8,6 +8,8 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Assignment
+import androidx.compose.material.icons.automirrored.outlined.Assignment
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
@@ -72,7 +74,7 @@ fun HomeScreen(
                     label = { Text("Inicio") }, selected = true, onClick = {})
                 NavigationBarItem(icon = { Icon(Icons.Outlined.Book, "Materias") },
                     label = { Text("Materias") }, selected = false, onClick = onNavigateToMaterias)
-                NavigationBarItem(icon = { Icon(Icons.Outlined.Assignment, "Tareas") },
+                NavigationBarItem(icon = { Icon(Icons.AutoMirrored.Outlined.Assignment, "Tareas") },
                     label = { Text("Tareas") }, selected = false, onClick = onNavigateToTareas)
                 NavigationBarItem(icon = { Icon(Icons.Outlined.CalendarMonth, "Agenda") },
                     label = { Text("Agenda") }, selected = false, onClick = onNavigateToCalendario)
@@ -98,7 +100,7 @@ fun HomeScreen(
                     Row(modifier = Modifier.padding(20.dp).fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceAround) {
                         StatItem(uiState.materias.size.toString(), "Materias", Icons.Filled.Book)
-                        StatItem(uiState.tareasPendientes.size.toString(), "Pendientes", Icons.Filled.Assignment)
+                        StatItem(uiState.tareasPendientes.size.toString(), "Pendientes", Icons.AutoMirrored.Filled.Assignment)
                         StatItem(uiState.tareasHoy.size.toString(), "Hoy", Icons.Filled.Today,
                             highlight = uiState.tareasHoy.isNotEmpty())
                     }
