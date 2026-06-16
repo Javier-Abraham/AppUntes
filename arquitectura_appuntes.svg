@@ -1,0 +1,377 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1080" width="1400" height="1080" font-family="'Segoe UI', 'Roboto', 'Arial', sans-serif">
+  <defs>
+    <!-- Gradients for layer headers -->
+    <linearGradient id="gradPresentation" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6750A4;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#9A7FD4;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="gradDomain" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#006874;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#00A0B0;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="gradData" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F57F17;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#FFB300;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="gradExternal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#555555;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#888888;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <!-- Glow filter for arrows -->
+    <filter id="arrowGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Arrow markers -->
+    <marker id="arrowViolet" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#B09FD8"/>
+    </marker>
+    <marker id="arrowTeal" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#00C4D4"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FFB300"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#AAAAAA"/>
+    </marker>
+    <marker id="arrowWhite" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="rgba(255,255,255,0.6)"/>
+    </marker>
+    <!-- Background pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1A1A2E" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="1080" fill="#0A0A0F"/>
+  <rect width="1400" height="1080" fill="url(#grid)" opacity="0.4"/>
+
+  <!-- Title -->
+  <text x="700" y="46" text-anchor="middle" fill="#FFFFFF" font-size="26" font-weight="700" letter-spacing="2">AppUntes — Arquitectura MVVM + Repository Pattern</text>
+  <text x="700" y="68" text-anchor="middle" fill="#888888" font-size="13" letter-spacing="1">Android · Kotlin · Jetpack Compose · Room · Retrofit2 · WorkManager · DataStore</text>
+  <line x1="80" y1="78" x2="1320" y2="78" stroke="#222233" stroke-width="1"/>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- PRESENTATION LAYER -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="30" y="92" width="1340" height="330" rx="14" ry="14" fill="#6750A4" fill-opacity="0.08" stroke="#6750A4" stroke-width="1.5" stroke-opacity="0.5" filter="url(#shadow)"/>
+
+  <!-- Layer header pill -->
+  <rect x="30" y="92" width="1340" height="44" rx="14" ry="14" fill="url(#gradPresentation)" fill-opacity="0.85"/>
+  <rect x="30" y="114" width="1340" height="22" fill="url(#gradPresentation)" fill-opacity="0.85"/>
+  <text x="54" y="120" fill="#FFFFFF" font-size="15" font-weight="700" letter-spacing="3">PRESENTATION LAYER</text>
+  <text x="54" y="134" fill="#E0D6F5" font-size="11">Jetpack Compose · Navigation · ViewModel</text>
+
+  <!-- MainActivity box -->
+  <rect x="50" y="152" width="160" height="56" rx="8" fill="#6750A4" fill-opacity="0.25" stroke="#9A7FD4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="130" y="176" text-anchor="middle" fill="#E8DEFF" font-size="13" font-weight="600">MainActivity</text>
+  <text x="130" y="194" text-anchor="middle" fill="#B09FD8" font-size="10">Entry Point · setContent</text>
+
+  <!-- NavGraph box -->
+  <rect x="240" y="152" width="160" height="56" rx="8" fill="#6750A4" fill-opacity="0.25" stroke="#9A7FD4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="320" y="176" text-anchor="middle" fill="#E8DEFF" font-size="13" font-weight="600">NavGraph.kt</text>
+  <text x="320" y="194" text-anchor="middle" fill="#B09FD8" font-size="10">NavHostController</text>
+
+  <!-- Screen.kt box -->
+  <rect x="430" y="152" width="160" height="56" rx="8" fill="#6750A4" fill-opacity="0.18" stroke="#9A7FD4" stroke-width="1" stroke-dasharray="5,3" filter="url(#shadow)"/>
+  <text x="510" y="176" text-anchor="middle" fill="#E8DEFF" font-size="13" font-weight="600">Screen.kt</text>
+  <text x="510" y="194" text-anchor="middle" fill="#B09FD8" font-size="10">Sealed Routes</text>
+
+  <!-- SCREENS group -->
+  <rect x="48" y="230" width="830" height="76" rx="8" fill="#6750A4" fill-opacity="0.12" stroke="#9A7FD4" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="64" y="246" fill="#D0BFFF" font-size="10" font-weight="600" letter-spacing="1">SCREENS (Composables)</text>
+
+  <!-- Individual screens -->
+  <rect x="60" y="252" width="118" height="40" rx="6" fill="#6750A4" fill-opacity="0.35" stroke="#9A7FD4" stroke-width="1"/>
+  <text x="119" y="268" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">HomeScreen</text>
+  <text x="119" y="283" text-anchor="middle" fill="#C4B5FD" font-size="9">Resumen general</text>
+
+  <rect x="190" y="252" width="118" height="40" rx="6" fill="#6750A4" fill-opacity="0.35" stroke="#9A7FD4" stroke-width="1"/>
+  <text x="249" y="268" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">MateriasScreen</text>
+  <text x="249" y="283" text-anchor="middle" fill="#C4B5FD" font-size="9">Lista + Detalle</text>
+
+  <rect x="320" y="252" width="118" height="40" rx="6" fill="#6750A4" fill-opacity="0.35" stroke="#9A7FD4" stroke-width="1"/>
+  <text x="379" y="268" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">TareasScreen</text>
+  <text x="379" y="283" text-anchor="middle" fill="#C4B5FD" font-size="9">Lista + Crear</text>
+
+  <rect x="450" y="252" width="118" height="40" rx="6" fill="#6750A4" fill-opacity="0.35" stroke="#9A7FD4" stroke-width="1"/>
+  <text x="509" y="268" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">CalendarioScreen</text>
+  <text x="509" y="283" text-anchor="middle" fill="#C4B5FD" font-size="9">Vista fecha</text>
+
+  <rect x="580" y="252" width="118" height="40" rx="6" fill="#6750A4" fill-opacity="0.35" stroke="#9A7FD4" stroke-width="1"/>
+  <text x="639" y="268" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">OnboardingScreen</text>
+  <text x="639" y="283" text-anchor="middle" fill="#C4B5FD" font-size="9">Primer acceso</text>
+
+  <rect x="710" y="252" width="118" height="40" rx="6" fill="#6750A4" fill-opacity="0.35" stroke="#9A7FD4" stroke-width="1"/>
+  <text x="769" y="268" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">PerfilScreen</text>
+  <text x="769" y="283" text-anchor="middle" fill="#C4B5FD" font-size="9">Configuración</text>
+
+  <!-- VIEWMODELS group -->
+  <rect x="900" y="152" width="450" height="164" rx="8" fill="#6750A4" fill-opacity="0.12" stroke="#9A7FD4" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="916" y="168" fill="#D0BFFF" font-size="10" font-weight="600" letter-spacing="1">VIEWMODELS (StateFlow · LiveData)</text>
+
+  <rect x="912" y="176" width="130" height="52" rx="6" fill="#6750A4" fill-opacity="0.40" stroke="#9A7FD4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="977" y="197" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">HomeViewModel</text>
+  <text x="977" y="212" text-anchor="middle" fill="#C4B5FD" font-size="9">uiState · Flow</text>
+
+  <rect x="1062" y="176" width="130" height="52" rx="6" fill="#6750A4" fill-opacity="0.40" stroke="#9A7FD4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1127" y="197" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">MateriasViewModel</text>
+  <text x="1127" y="212" text-anchor="middle" fill="#C4B5FD" font-size="9">materias · StateFlow</text>
+
+  <rect x="1212" y="176" width="130" height="52" rx="6" fill="#6750A4" fill-opacity="0.40" stroke="#9A7FD4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1277" y="197" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">TareasViewModel</text>
+  <text x="1277" y="212" text-anchor="middle" fill="#C4B5FD" font-size="9">tareas · StateFlow</text>
+
+  <!-- AppUntesApplication -->
+  <rect x="912" y="252" width="130" height="52" rx="6" fill="#6750A4" fill-opacity="0.20" stroke="#9A7FD4" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="977" y="271" text-anchor="middle" fill="#D0BFFF" font-size="11" font-weight="600">AppUntes</text>
+  <text x="977" y="284" text-anchor="middle" fill="#B09FD8" font-size="10">Application.kt</text>
+  <text x="977" y="297" text-anchor="middle" fill="#8B79C4" font-size="9">Hilt DI Entry</text>
+
+  <!-- NotificationHelper -->
+  <rect x="1062" y="252" width="130" height="52" rx="6" fill="#6750A4" fill-opacity="0.20" stroke="#9A7FD4" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="1127" y="271" text-anchor="middle" fill="#D0BFFF" font-size="11" font-weight="600">NotificationHelper</text>
+  <text x="1127" y="284" text-anchor="middle" fill="#B09FD8" font-size="10">core/util</text>
+  <text x="1127" y="297" text-anchor="middle" fill="#8B79C4" font-size="9">Alertas tareas</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- DOMAIN LAYER -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="30" y="444" width="1340" height="160" rx="14" ry="14" fill="#006874" fill-opacity="0.08" stroke="#006874" stroke-width="1.5" stroke-opacity="0.5" filter="url(#shadow)"/>
+  <rect x="30" y="444" width="1340" height="44" rx="14" ry="14" fill="url(#gradDomain)" fill-opacity="0.85"/>
+  <rect x="30" y="466" width="1340" height="22" fill="url(#gradDomain)" fill-opacity="0.85"/>
+  <text x="54" y="472" fill="#FFFFFF" font-size="15" font-weight="700" letter-spacing="3">DOMAIN LAYER</text>
+  <text x="54" y="486" fill="#B2EBF2" font-size="11">Pure Kotlin · Modelos de negocio · Sin dependencias Android</text>
+
+  <!-- Materia.kt -->
+  <rect x="100" y="504" width="220" height="86" rx="8" fill="#006874" fill-opacity="0.30" stroke="#00C4D4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="210" y="522" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">Materia.kt</text>
+  <line x1="110" y1="528" x2="310" y2="528" stroke="#00C4D4" stroke-width="0.5" opacity="0.5"/>
+  <text x="120" y="543" fill="#80DEEA" font-size="10">id: Int</text>
+  <text x="120" y="557" fill="#80DEEA" font-size="10">nombre: String</text>
+  <text x="120" y="571" fill="#80DEEA" font-size="10">color: String · icono: String</text>
+  <text x="120" y="585" fill="#80DEEA" font-size="10">data class · @Parcelize</text>
+
+  <!-- Tarea.kt -->
+  <rect x="360" y="504" width="240" height="86" rx="8" fill="#006874" fill-opacity="0.30" stroke="#00C4D4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="480" y="522" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">Tarea.kt</text>
+  <line x1="370" y1="528" x2="590" y2="528" stroke="#00C4D4" stroke-width="0.5" opacity="0.5"/>
+  <text x="380" y="543" fill="#80DEEA" font-size="10">id · titulo · descripcion</text>
+  <text x="380" y="557" fill="#80DEEA" font-size="10">fechaVencimiento · materiaId</text>
+  <text x="380" y="571" fill="#80DEEA" font-size="10">prioridad: PrioridadTarea</text>
+  <text x="380" y="585" fill="#80DEEA" font-size="10">estado: EstadoTarea</text>
+
+  <!-- PrioridadTarea enum -->
+  <rect x="650" y="504" width="195" height="86" rx="8" fill="#006874" fill-opacity="0.20" stroke="#00C4D4" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="748" y="522" text-anchor="middle" fill="#E0F7FA" font-size="12" font-weight="600">PrioridadTarea</text>
+  <line x1="660" y1="528" x2="836" y2="528" stroke="#00C4D4" stroke-width="0.5" opacity="0.4"/>
+  <text x="660" y="543" fill="#80DEEA" font-size="10">  enum class</text>
+  <text x="660" y="558" fill="#80DEEA" font-size="10">  ALTA · MEDIA · BAJA</text>
+  <text x="748" y="582" text-anchor="middle" fill="#4DD0E1" font-size="9">«enum»</text>
+
+  <!-- EstadoTarea enum -->
+  <rect x="880" y="504" width="195" height="86" rx="8" fill="#006874" fill-opacity="0.20" stroke="#00C4D4" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="978" y="522" text-anchor="middle" fill="#E0F7FA" font-size="12" font-weight="600">EstadoTarea</text>
+  <line x1="890" y1="528" x2="1066" y2="528" stroke="#00C4D4" stroke-width="0.5" opacity="0.4"/>
+  <text x="890" y="543" fill="#80DEEA" font-size="10">  enum class</text>
+  <text x="890" y="558" fill="#80DEEA" font-size="10">  PENDIENTE</text>
+  <text x="890" y="572" fill="#80DEEA" font-size="10">  EN_PROGRESO · COMPLETADA</text>
+  <text x="978" y="582" text-anchor="middle" fill="#4DD0E1" font-size="9">«enum»</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- DATA LAYER -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="30" y="626" width="1340" height="300" rx="14" ry="14" fill="#F57F17" fill-opacity="0.06" stroke="#F57F17" stroke-width="1.5" stroke-opacity="0.5" filter="url(#shadow)"/>
+  <rect x="30" y="626" width="1340" height="44" rx="14" ry="14" fill="url(#gradData)" fill-opacity="0.85"/>
+  <rect x="30" y="648" width="1340" height="22" fill="url(#gradData)" fill-opacity="0.85"/>
+  <text x="54" y="654" fill="#FFFFFF" font-size="15" font-weight="700" letter-spacing="3">DATA LAYER</text>
+  <text x="54" y="668" fill="#FFF9C4" font-size="11">Room Database · Repository Pattern · DAOs · Entities</text>
+
+  <!-- Repositories -->
+  <rect x="48" y="686" width="300" height="118" rx="8" fill="#F57F17" fill-opacity="0.12" stroke="#FFB300" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="64" y="702" fill="#FFE082" font-size="10" font-weight="600" letter-spacing="1">REPOSITORIES</text>
+
+  <rect x="58" y="710" width="130" height="84" rx="6" fill="#F57F17" fill-opacity="0.25" stroke="#FFB300" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="123" y="727" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700">MateriaRepository</text>
+  <line x1="68" y1="733" x2="178" y2="733" stroke="#FFB300" stroke-width="0.5" opacity="0.5"/>
+  <text x="68" y="748" fill="#FFE082" font-size="9">+ getMaterias(): Flow</text>
+  <text x="68" y="762" fill="#FFE082" font-size="9">+ insertMateria()</text>
+  <text x="68" y="776" fill="#FFE082" font-size="9">+ deleteMateria()</text>
+
+  <rect x="208" y="710" width="130" height="84" rx="6" fill="#F57F17" fill-opacity="0.25" stroke="#FFB300" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="273" y="727" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700">TareaRepository</text>
+  <line x1="218" y1="733" x2="328" y2="733" stroke="#FFB300" stroke-width="0.5" opacity="0.5"/>
+  <text x="218" y="748" fill="#FFE082" font-size="9">+ getTareas(): Flow</text>
+  <text x="218" y="762" fill="#FFE082" font-size="9">+ insertTarea()</text>
+  <text x="218" y="776" fill="#FFE082" font-size="9">+ deleteTarea()</text>
+
+  <!-- DAOs -->
+  <rect x="380" y="686" width="300" height="118" rx="8" fill="#F57F17" fill-opacity="0.12" stroke="#FFB300" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="396" y="702" fill="#FFE082" font-size="10" font-weight="600" letter-spacing="1">ROOM DAOs (@Dao)</text>
+
+  <rect x="390" y="710" width="130" height="84" rx="6" fill="#F57F17" fill-opacity="0.25" stroke="#FFB300" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="455" y="727" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700">MateriaDao</text>
+  <line x1="400" y1="733" x2="510" y2="733" stroke="#FFB300" stroke-width="0.5" opacity="0.5"/>
+  <text x="400" y="748" fill="#FFE082" font-size="9">@Query getAllMaterias</text>
+  <text x="400" y="762" fill="#FFE082" font-size="9">@Insert · @Delete</text>
+  <text x="400" y="776" fill="#FFE082" font-size="9">@Update</text>
+
+  <rect x="540" y="710" width="130" height="84" rx="6" fill="#F57F17" fill-opacity="0.25" stroke="#FFB300" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="605" y="727" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700">TareaDao</text>
+  <line x1="550" y1="733" x2="660" y2="733" stroke="#FFB300" stroke-width="0.5" opacity="0.5"/>
+  <text x="550" y="748" fill="#FFE082" font-size="9">@Query getAllTareas</text>
+  <text x="550" y="762" fill="#FFE082" font-size="9">@Insert · @Delete</text>
+  <text x="550" y="776" fill="#FFE082" font-size="9">@Update</text>
+
+  <!-- Entities -->
+  <rect x="710" y="686" width="300" height="118" rx="8" fill="#F57F17" fill-opacity="0.12" stroke="#FFB300" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="726" y="702" fill="#FFE082" font-size="10" font-weight="600" letter-spacing="1">ENTITIES (@Entity)</text>
+
+  <rect x="720" y="710" width="130" height="84" rx="6" fill="#F57F17" fill-opacity="0.25" stroke="#FFB300" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="785" y="727" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700">MateriaEntity</text>
+  <line x1="730" y1="733" x2="840" y2="733" stroke="#FFB300" stroke-width="0.5" opacity="0.5"/>
+  <text x="730" y="748" fill="#FFE082" font-size="9">tableName = "materias"</text>
+  <text x="730" y="762" fill="#FFE082" font-size="9">@PrimaryKey id</text>
+  <text x="730" y="776" fill="#FFE082" font-size="9">Mapeo → Materia.kt</text>
+
+  <rect x="870" y="710" width="130" height="84" rx="6" fill="#F57F17" fill-opacity="0.25" stroke="#FFB300" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="935" y="727" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700">TareaEntity</text>
+  <line x1="880" y1="733" x2="990" y2="733" stroke="#FFB300" stroke-width="0.5" opacity="0.5"/>
+  <text x="880" y="748" fill="#FFE082" font-size="9">tableName = "tareas"</text>
+  <text x="880" y="762" fill="#FFE082" font-size="9">@PrimaryKey id</text>
+  <text x="880" y="776" fill="#FFE082" font-size="9">Mapeo → Tarea.kt</text>
+
+  <!-- AppDatabase -->
+  <rect x="1040" y="686" width="302" height="118" rx="8" fill="#F57F17" fill-opacity="0.20" stroke="#FFB300" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1191" y="704" text-anchor="middle" fill="#FFE082" font-size="10" font-weight="600" letter-spacing="1">DATABASE</text>
+  <rect x="1055" y="710" width="272" height="84" rx="6" fill="#F57F17" fill-opacity="0.30" stroke="#FFB300" stroke-width="1.5"/>
+  <text x="1191" y="728" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">AppDatabase</text>
+  <text x="1055" y="735" fill="" font-size="0"> </text>
+  <line x1="1065" y1="734" x2="1317" y2="734" stroke="#FFB300" stroke-width="0.5" opacity="0.5"/>
+  <text x="1065" y="749" fill="#FFE082" font-size="9">@Database(entities=[MateriaEntity,</text>
+  <text x="1065" y="763" fill="#FFE082" font-size="9">           TareaEntity], version=1)</text>
+  <text x="1065" y="778" fill="#FFE082" font-size="9">RoomDatabase · SQLite</text>
+  <text x="1191" y="786" text-anchor="middle" fill="#FF8F00" font-size="9" font-weight="600">Room / SQLite</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- EXTERNAL SERVICES LAYER -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="30" y="948" width="1340" height="104" rx="14" ry="14" fill="#555555" fill-opacity="0.12" stroke="#555555" stroke-width="1.5" stroke-opacity="0.6" filter="url(#shadow)"/>
+  <rect x="30" y="948" width="1340" height="38" rx="14" ry="14" fill="url(#gradExternal)" fill-opacity="0.85"/>
+  <rect x="30" y="966" width="1340" height="20" fill="url(#gradExternal)" fill-opacity="0.85"/>
+  <text x="54" y="972" fill="#FFFFFF" font-size="14" font-weight="700" letter-spacing="3">EXTERNAL SERVICES</text>
+  <text x="54" y="984" fill="#EEEEEE" font-size="10">Servicios del sistema Android · APIs externas</text>
+
+  <rect x="60" y="996" width="230" height="46" rx="7" fill="#555555" fill-opacity="0.45" stroke="#888888" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="175" y="1015" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="600">Retrofit2 / ApiService.kt</text>
+  <text x="175" y="1031" text-anchor="middle" fill="#CCCCCC" font-size="9">RetrofitInstance · HTTP REST</text>
+
+  <rect x="316" y="996" width="230" height="46" rx="7" fill="#555555" fill-opacity="0.45" stroke="#888888" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="431" y="1015" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="600">WorkManager</text>
+  <text x="431" y="1031" text-anchor="middle" fill="#CCCCCC" font-size="9">Tareas en segundo plano · Jobs</text>
+
+  <rect x="572" y="996" width="230" height="46" rx="7" fill="#555555" fill-opacity="0.45" stroke="#888888" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="687" y="1015" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="600">DataStore Preferences</text>
+  <text x="687" y="1031" text-anchor="middle" fill="#CCCCCC" font-size="9">Onboarding · Config usuario</text>
+
+  <rect x="828" y="996" width="230" height="46" rx="7" fill="#555555" fill-opacity="0.45" stroke="#888888" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="943" y="1015" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="600">FileProvider / Cámara</text>
+  <text x="943" y="1031" text-anchor="middle" fill="#CCCCCC" font-size="9">Adjuntos · Fotos en notas</text>
+
+  <rect x="1084" y="996" width="256" height="46" rx="7" fill="#555555" fill-opacity="0.45" stroke="#888888" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1212" y="1015" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="600">NotificationManager</text>
+  <text x="1212" y="1031" text-anchor="middle" fill="#CCCCCC" font-size="9">NotificationHelper · Alertas</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- FLOW ARROWS (main vertical flow) -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+
+  <!-- MainActivity → NavGraph -->
+  <line x1="210" y1="180" x2="238" y2="180" stroke="#B09FD8" stroke-width="1.8" marker-end="url(#arrowViolet)" opacity="0.9"/>
+
+  <!-- NavGraph → Screen.kt -->
+  <line x1="400" y1="180" x2="428" y2="180" stroke="#B09FD8" stroke-width="1.8" marker-end="url(#arrowViolet)" opacity="0.9"/>
+
+  <!-- Screens → ViewModels (horizontal) -->
+  <line x1="769" y1="272" x2="900" y2="202" stroke="#B09FD8" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrowViolet)" opacity="0.7"/>
+
+  <!-- HomeViewModel → HomeScreen arrow label -->
+  <text x="836" y="228" fill="#B09FD8" font-size="9" text-anchor="middle">observes</text>
+
+  <!-- ViewModels → Repository (vertical, Presentation → Data) -->
+  <!-- HomeViewModel down -->
+  <line x1="977" y1="228" x2="977" y2="400" stroke="#B09FD8" stroke-width="1.5" opacity="0.6"/>
+  <line x1="977" y1="400" x2="123" y2="680" stroke="#B09FD8" stroke-width="1.5" marker-end="url(#arrowViolet)" opacity="0.5"/>
+
+  <!-- MateriasViewModel → MateriaRepository -->
+  <line x1="1127" y1="228" x2="1127" y2="420" stroke="#9A7FD4" stroke-width="1.5" opacity="0.5"/>
+  <line x1="1127" y1="420" x2="123" y2="686" stroke="#9A7FD4" stroke-width="1.5" marker-end="url(#arrowViolet)" opacity="0.5"/>
+
+  <!-- TareasViewModel → TareaRepository -->
+  <line x1="1277" y1="228" x2="1277" y2="434" stroke="#7B6CBF" stroke-width="1.5" opacity="0.45"/>
+  <line x1="1277" y1="434" x2="273" y2="686" stroke="#7B6CBF" stroke-width="1.5" marker-end="url(#arrowViolet)" opacity="0.45"/>
+
+  <!-- Flow label -->
+  <rect x="1100" y="368" width="180" height="26" rx="4" fill="#0A0A0F" fill-opacity="0.8"/>
+  <text x="1190" y="385" text-anchor="middle" fill="#B09FD8" font-size="10" font-style="italic">inject(Repository)</text>
+
+  <!-- Repository → DAO arrows -->
+  <line x1="188" y1="794" x2="455" y2="794" stroke="#FFB300" stroke-width="1.8" marker-end="url(#arrowOrange)" opacity="0.85"/>
+  <line x1="273" y1="794" x2="455" y2="794" stroke="#FFB300" stroke-width="1.8" opacity="0.85"/>
+
+  <!-- DAO → Entity arrows -->
+  <line x1="520" y1="794" x2="720" y2="794" stroke="#FFB300" stroke-width="1.8" marker-end="url(#arrowOrange)" opacity="0.85"/>
+  <line x1="605" y1="794" x2="720" y2="794" stroke="#FFB300" stroke-width="1.8" opacity="0.85"/>
+
+  <!-- Entity → AppDatabase -->
+  <line x1="850" y1="752" x2="1040" y2="752" stroke="#FFB300" stroke-width="2" marker-end="url(#arrowOrange)" opacity="0.9"/>
+
+  <!-- Domain ↔ Data (mapping) -->
+  <line x1="210" y1="590" x2="210" y2="626" stroke="#00C4D4" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowTeal)" opacity="0.7"/>
+  <line x1="480" y1="590" x2="480" y2="626" stroke="#00C4D4" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowTeal)" opacity="0.7"/>
+
+  <!-- Domain ↔ Presentation (ViewModels use domain models) -->
+  <line x1="480" y1="504" x2="480" y2="422" stroke="#00C4D4" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowTeal)" opacity="0.65"/>
+
+  <!-- Flow arrows labels in data layer -->
+  <rect x="320" y="802" width="130" height="18" rx="3" fill="#0A0A0F" fill-opacity="0.7"/>
+  <text x="385" y="814" text-anchor="middle" fill="#FFB300" font-size="9" font-style="italic">uses DAO interface</text>
+
+  <rect x="560" y="802" width="130" height="18" rx="3" fill="#0A0A0F" fill-opacity="0.7"/>
+  <text x="625" y="814" text-anchor="middle" fill="#FFB300" font-size="9" font-style="italic">maps to Entity</text>
+
+  <rect x="870" y="760" width="170" height="18" rx="3" fill="#0A0A0F" fill-opacity="0.7"/>
+  <text x="955" y="772" text-anchor="middle" fill="#FFB300" font-size="9" font-style="italic">registered in @Database</text>
+
+  <!-- External arrows -->
+  <line x1="123" y1="804" x2="175" y2="996" stroke="#888888" stroke-width="1.2" stroke-dasharray="4,4" marker-end="url(#arrowGray)" opacity="0.5"/>
+  <line x1="1127" y1="294" x2="431" y2="996" stroke="#888888" stroke-width="1.2" stroke-dasharray="4,4" marker-end="url(#arrowGray)" opacity="0.4"/>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- FLOW LEGEND -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="630" y="862" width="440" height="76" rx="8" fill="#111120" fill-opacity="0.9" stroke="#333355" stroke-width="1"/>
+  <text x="850" y="878" text-anchor="middle" fill="#AAAAAA" font-size="10" font-weight="600" letter-spacing="2">FLUJO DE DATOS</text>
+
+  <line x1="648" y1="895" x2="698" y2="895" stroke="#B09FD8" stroke-width="2" marker-end="url(#arrowViolet)"/>
+  <text x="708" y="899" fill="#B09FD8" font-size="10">Screen → ViewModel</text>
+
+  <line x1="820" y1="895" x2="870" y2="895" stroke="#FFB300" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <text x="880" y="899" fill="#FFB300" font-size="10">Repository → DAO → DB</text>
+
+  <line x1="648" y1="920" x2="698" y2="920" stroke="#00C4D4" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#arrowTeal)"/>
+  <text x="708" y="924" fill="#00C4D4" font-size="10">Domain model mapping</text>
+
+  <line x1="820" y1="920" x2="870" y2="920" stroke="#888888" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrowGray)"/>
+  <text x="880" y="924" fill="#888888" font-size="10">External service use</text>
+
+  <!-- Package path label -->
+  <text x="700" y="1066" text-anchor="middle" fill="#333355" font-size="10">com.appuntes · master · Android Studio · © 2026</text>
+
+</svg>
