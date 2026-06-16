@@ -12,10 +12,10 @@ import androidx.room.PrimaryKey
             entity = MateriaEntity::class,
             parentColumns = ["id"],
             childColumns = ["materiaId"],
-            onDelete = ForeignKey.CASCADE
+            onDelete = ForeignKey.CASCADE  // Si borras la materia, se borran sus tareas
         )
     ],
-    indices = [Index("materiaId")]
+    indices = [Index("materiaId")]  // Indice para busquedas rapidas por materias
 )
 data class TareaEntity(
     @PrimaryKey(autoGenerate = true)
