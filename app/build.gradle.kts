@@ -16,9 +16,18 @@ android {
         versionName = "1.0.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        create("release") {
+            storeFile = file("C:/Users/angel/AndroidStudioProjects/AppUntes/appuntes.jks")
+            storePassword = "AppUntes2026"
+            keyAlias = "appuntes"
+            keyPassword = "AppUntes2026"
+        }
+    }
     buildTypes {
         release {
             isMinifyEnabled = true
+            signingConfig = signingConfigs.getByName("release")
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
