@@ -31,8 +31,8 @@ AppUntes centraliza materias, tareas y fechas de entrega en un solo lugar, reemp
 | Nombre | Rol |
 |--------|-----|
 | Javier José Abraham Mamaní | Tech Lead / Android Dev |
-| Damián Barrios | UX/UI / Figma |
-| Andrea Luque | UX/UI / Figma / Documentación |
+| Damián Barrios | Backend Lead / QA / UX/UI |
+| Andrea Luque | UX/UI / Product Owner |
 
 ## 🏫 Información académica
 
@@ -43,7 +43,8 @@ AppUntes centraliza materias, tareas y fechas de entrega en un solo lugar, reemp
 
 ## 📋 Tablero de seguimiento
 
-[Ver GitHub Projects](https://github.com/users/Javier-Abraham/projects/2)
+- [Tablero Trello](https://trello.com/invite/b/6a1cd08bb6d6e2c70c628eaf/ATTI825d7f3ec5dfc0c3b74869f982c09f6d22E463EE/appuntes-grupo-6)
+- [Ver GitHub Projects](https://github.com/users/Javier-Abraham/projects/2)
 
 ## 🚀 Cómo ejecutar
 
